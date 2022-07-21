@@ -1,0 +1,60 @@
+// font-family: "Audiowide", cursive;
+// font-family: "DM Mono", monospace;
+// font-family: "Inter", sans-serif;
+@font-face {
+  font-family: "Audiowide";
+  src: url(../fonts/Audiowide-Regular.woff2),
+    url(../fonts/Audiowide-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url(../fonts/DMMono-Regular.woff2), url(../fonts/DMMono-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Regular.woff2), url(../fonts/Inter-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header {
+  padding: 50px 20px 9px;
+  background-color: #000;
+
+  &-container {
+    margin: 0 auto;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      nav {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        a {
+          font-family: "DM Mono", monospace;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 12px;
+    }
+  }
+}
