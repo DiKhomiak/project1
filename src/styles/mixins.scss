@@ -40,3 +40,10 @@
   background-color: #000000;
   color: $primary-color;
 }
+@mixin roadmap-font {
+  font-family: $Inter;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 26px;
+  color: $primary-color;
+}

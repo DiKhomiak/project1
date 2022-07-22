@@ -367,3 +367,103 @@
     }
   }
 }
+
+.parallax {
+  background-image: url(../assets/parallax.jpg);
+  min-height: 240px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.roadmap {
+  background-color: $background;
+  padding: 118px 50px 288px;
+
+  &-container {
+    margin: 0 auto;
+    max-width: 540px;
+
+    h2 {
+      @include title;
+      margin-bottom: 106px;
+      text-align: center;
+    }
+
+    .phases {
+      display: flex;
+      flex-direction: column;
+      gap: 140px;
+
+      .phase {
+        border: 1px solid $neon;
+        background-color: #222222;
+
+        .phase-top {
+          max-height: 70px;
+          padding: 12px;
+          border: 1px solid $neon;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          h4 {
+            height: 45px;
+            width: 45px;
+            font-family: $DM-Mono;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 45px;
+            text-align: center;
+            color: $neon;
+            border: 1px solid $neon;
+          }
+          .complited {
+            color: #000000;
+            background-color: $neon;
+            border: 1px solid $neon;
+          }
+
+          h6 {
+            font-family: $DM-Mono;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $neon;
+          }
+
+          h5 {
+            font-family: $DM-Mono;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: $primary-color;
+          }
+        }
+
+        .phase-bottom {
+          padding: 30px 12px;
+          display: flex;
+          gap: 75px;
+
+          p {
+            @include roadmap-font;
+          }
+
+          .points {
+            padding-left: 22px;
+            margin-bottom: 12px;
+          }
+
+          img {
+            border-radius: 11px;
+          }
+        }
+      }
+    }
+  }
+}
