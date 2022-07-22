@@ -21,6 +21,10 @@
   font-weight: 400;
 }
 
+@import "variables.scss";
+
+@import "mixins.scss";
+
 .header {
   padding: 50px 20px 9px;
   background-color: #000;
@@ -43,11 +47,17 @@
         align-items: center;
 
         a {
-          font-family: "DM Mono", monospace;
+          font-family: $DM-Mono;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 16px;
-          color: #ffffff;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          color: $primary-color;
+          padding: 10px 5px;
+          border: 2px solid rgba(0, 0, 0, 0);
+        }
+        a:hover {
+          border-radius: 10px;
+          border: 2px solid #ffffff;
         }
       }
     }
@@ -55,6 +65,69 @@
     .social {
       display: flex;
       gap: 12px;
+    }
+  }
+}
+.intro {
+  padding: 133px 0 72px 103px;
+  background-color: #000;
+
+  &-container {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+
+    .description {
+      h1 {
+        font-family: $Audiowide;
+        font-weight: 400;
+        font-size: 5.1rem;
+        line-height: 6.1rem;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 43px;
+      }
+      p {
+        @include common-font;
+        max-width: 340px;
+        margin-bottom: 115px;
+      }
+      button {
+        font-family: $DM-Mono;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: #000000;
+        padding: 17px 50px 27px;
+        background-color: #8dfd1b;
+        border: 1px solid #8dfd1b;
+      }
+      button:hover {
+        border: 1px solid #8dfd1b;
+        background-color: #000000;
+        color: #8dfd1b;
+      }
+    }
+
+    .selector {
+      display: flex;
+      align-items: center;
+      gap: 93px;
+
+      img {
+        max-width: 235px;
+        max-height: 313px;
+        opacity: 0.5;
+        transition: 2s;
+      }
+      img:hover {
+        transform: scale(1.75);
+        // max-width: 420px;
+        // max-height: 545px;
+        opacity: 1;
+      }
     }
   }
 }
