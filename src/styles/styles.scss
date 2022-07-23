@@ -394,7 +394,8 @@
     .phases {
       display: flex;
       flex-direction: column;
-      gap: 140px;
+      gap: 50px;
+      align-items: center;
 
       .phase {
         border: 1px solid $neon;
@@ -453,6 +454,10 @@
           p {
             @include roadmap-font;
           }
+          .highlighted {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+          }
 
           .points {
             padding-left: 22px;
@@ -461,8 +466,19 @@
 
           img {
             border-radius: 11px;
+            max-width: 129px;
+            max-height: 129px;
+          }
+
+          span {
+            color: $neon;
           }
         }
+      }
+
+      .splitter {
+        height: 40px;
+        border-left: 1px solid $neon;
       }
     }
   }
