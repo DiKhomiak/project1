@@ -615,3 +615,80 @@
     }
   }
 }
+
+.team {
+  background-color: $background;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    span {
+      display: inline-block;
+      font-family: $Audiowide;
+      font-weight: 400;
+      font-size: 7.9rem;
+      line-height: 8.8rem;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+  }
+
+  &-container {
+    padding: 122px 140px 236px;
+
+    &-members {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      gap: 100px;
+
+      .team__member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          margin-bottom: 19px;
+        }
+
+        h5 {
+          font-family: $DM-Mono;
+          font-weight: 400;
+          font-size: 2.1rem;
+          line-height: 2.8rem;
+          text-align: center;
+          text-transform: uppercase;
+          color: $primary-color;
+          margin-bottom: 18px;
+        }
+
+        h6 {
+          font-family: $DM-Mono;
+          font-weight: 400;
+          font-size: 1.1rem;
+          line-height: 1.2rem;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: $neon;
+          margin-bottom: 22px;
+        }
+
+        .find {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 22px;
+        }
+
+        p {
+          font-family: $Inter;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.9rem;
+          text-align: center;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
