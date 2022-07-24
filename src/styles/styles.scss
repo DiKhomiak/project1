@@ -47,13 +47,7 @@
         align-items: center;
 
         a {
-          font-family: $DM-Mono;
-          font-weight: 400;
-          font-size: 1.6rem;
-          line-height: 1.6rem;
-          color: $primary-color;
-          padding: 10px 5px;
-          border: 2px solid rgba(0, 0, 0, 0);
+          @include navigation;
         }
         a:hover {
           border-radius: 10px;
@@ -745,6 +739,84 @@
     }
     &__purple {
       flex: 1;
+    }
+  }
+}
+
+.footer {
+  background-color: #42006a;
+  padding: 100px 140px;
+
+  &-container {
+    max-width: 1160px;
+    min-height: 117px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .rights {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        font-family: $DM-Mono;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        color: $primary-color;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 100px;
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          @include navigation;
+
+          padding: 0;
+        }
+      }
+
+      &-general {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          @include navigation;
+
+          padding: 0;
+        }
+      }
+
+      &-creators {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+
+        p {
+          font-family: $DM-Mono;
+          font-weight: 400;
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+          color: $primary-color;
+        }
+      }
+      &-social {
+        display: flex;
+        gap: 12px;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 }
