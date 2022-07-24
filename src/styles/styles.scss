@@ -681,6 +681,7 @@
         }
 
         p {
+          max-width: 238px;
           font-family: $Inter;
           font-weight: 400;
           font-size: 1.2rem;
@@ -689,6 +690,61 @@
           color: $primary-color;
         }
       }
+    }
+  }
+}
+
+.join {
+  background-color: $background;
+  padding: 0 136px 118px;
+
+  &-container {
+    margin: 0 auto;
+    max-width: 1160px;
+    display: flex;
+
+    &-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        @include title;
+        margin-bottom: 34px;
+
+        span {
+          color: $neon;
+        }
+      }
+
+      p {
+        @include common-font;
+        max-width: 345px;
+        margin-bottom: 35px;
+      }
+
+      button {
+        @include button;
+        padding: 12px;
+        max-width: 213px;
+        line-height: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+      }
+
+      button:hover {
+        @include button-hover;
+
+        img {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+        }
+      }
+    }
+    &__purple {
+      flex: 1;
     }
   }
 }
