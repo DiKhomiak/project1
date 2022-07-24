@@ -378,11 +378,14 @@
   &-container {
     margin: 0 auto;
     max-width: 540px;
+    z-index: 5;
+    position: relative;
 
     h2 {
       @include title;
       margin-bottom: 106px;
       text-align: center;
+      z-index: 5;
     }
 
     .phases {
@@ -394,6 +397,7 @@
       .phase {
         border: 1px solid $neon;
         background-color: #222222;
+        z-index: 5;
 
         .phase-top {
           max-height: 70px;
@@ -473,6 +477,58 @@
       .splitter {
         height: 40px;
         border-left: 1px solid $neon;
+      }
+    }
+    &-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-60%, -13%);
+
+      height: 1841px;
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .circle3 {
+        margin: auto 0;
+      }
+
+      .circle1,
+      .circle2,
+      .circle3 {
+        div {
+          border-radius: 100%;
+          border: 1px solid $neon;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .round1 {
+          width: 99px;
+          height: 99px;
+        }
+        .round2 {
+          width: 160px;
+          height: 160px;
+        }
+        .round3 {
+          width: 258px;
+          height: 258px;
+          border: 1px solid rgba(141, 253, 27, 0.75);
+        }
+        .round4 {
+          width: 416px;
+          height: 416px;
+          border: 1px solid rgba(141, 253, 27, 0.5);
+        }
+        .round5 {
+          width: 672px;
+          height: 672px;
+          border: 1px solid rgba(141, 253, 27, 0.25);
+        }
       }
     }
   }
