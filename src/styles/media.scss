@@ -1,6 +1,7 @@
 @import "variables.scss";
 
 @import "mixins.scss";
+
 @media (max-width: 1200px) {
   .header {
     &-container {
@@ -26,13 +27,13 @@
           padding: 17px 30px 17px;
         }
       }
-    }
-    .selector {
-      gap: 35px;
+      .selector {
+        gap: 35px;
 
-      img {
-        max-width: 180px;
-        max-height: 240px;
+        img {
+          max-width: 180px;
+          max-height: 240px;
+        }
       }
     }
   }
@@ -133,6 +134,279 @@
       .links {
         gap: 50px;
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 20px 9px;
+
+    &-container {
+      max-width: 728px;
+
+      .nav-container {
+        max-width: 414px;
+        width: 100%;
+        justify-content: space-between;
+
+        img {
+          width: 120%;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+
+    .social-container {
+      .social {
+        align-self: center;
+        max-width: 100px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .intro {
+    padding: 83px 30px 53px;
+
+    &-container {
+      max-width: 728px;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+
+      .description {
+        max-width: 728px;
+
+        h1 {
+          font-size: 5.2rem;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 3rem;
+          max-width: 650px;
+
+          margin-bottom: 65px;
+        }
+
+        button {
+          padding: 15px 30px;
+        }
+      }
+
+      .selector {
+        gap: 50px;
+      }
+    }
+  }
+
+  .waveNFT {
+    padding: 44px 30px 70px;
+
+    &-container {
+      max-width: 728px;
+
+      &__blue {
+        h2 {
+          padding-left: 36px;
+          margin-bottom: 31px;
+          font-size: 3.6rem;
+        }
+        img {
+          max-width: 85%;
+        }
+      }
+      &-description {
+        h3 {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          margin-bottom: 22px;
+        }
+        p {
+          font-size: 1.5rem;
+          line-height: 2.1rem;
+          margin-bottom: 14px;
+        }
+        p:nth-child(4) {
+          margin-bottom: 26px;
+        }
+
+        button {
+          padding: 10px 23px;
+        }
+      }
+    }
+  }
+
+  .artists {
+    &__marquee {
+      max-width: 768px;
+
+      div {
+        animation: marquee 3s linear infinite;
+
+        h2 {
+          font-size: 5.9rem;
+          line-height: 6.8rem;
+
+          span {
+            font-size: 5rem;
+          }
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-70%);
+            }
+          }
+        }
+      }
+    }
+
+    &-container {
+      padding: 70px 20px;
+
+      &-list {
+        max-width: 1000px;
+        grid-template-columns: repeat(auto-fill, 180px);
+        gap: 30px;
+
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .story {
+    padding: 60px 40px 72px;
+
+    &-container {
+      max-width: 1000px;
+      .content {
+        min-height: 450px;
+        .list {
+          label {
+            height: 62px;
+            font-size: 1.4rem;
+            line-height: 6.2rem;
+            padding-left: 18px;
+          }
+          .indicator {
+            height: 62px;
+          }
+        }
+        #partners:checked ~ .list .indicator {
+          top: 62px;
+        }
+        #future:checked ~ .list .indicator {
+          top: 124px;
+        }
+
+        .text-content {
+          padding: 30px;
+
+          .founders {
+            padding-left: 0px;
+
+            img {
+              height: 200px;
+            }
+
+            h3 {
+              margin-left: 165px;
+              min-height: 200px;
+              display: flex;
+              align-items: center;
+              margin-bottom: 22px;
+            }
+          }
+
+          .partners {
+            padding-left: 0px;
+
+            h3 {
+              margin-left: 202px;
+              min-height: 133px;
+              display: flex;
+              align-items: center;
+              margin-bottom: 22px;
+            }
+          }
+
+          .future {
+            padding-left: 0px;
+
+            h3 {
+              margin-left: 202px;
+              min-height: 114px;
+              display: flex;
+              align-items: center;
+              margin-bottom: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .roadmap {
+    padding: 68px 50px 138px;
+
+    &-container {
+      h2 {
+        margin-bottom: 56px;
+      }
+      .phases {
+        gap: 30px;
+
+        .splitter {
+          height: 20px;
+          border-left: 1px solid $neon;
+        }
+      }
+
+      &-back {
+        height: 1350px;
+        max-width: 760px;
+
+        .circle1,
+        .circle2,
+        .circle3 {
+          div {
+            border: 2px solid $neon;
+          }
+        }
+
+        .circle3 {
+          max-width: 380px;
+        }
+        @keyframes pulse-ring {
+          0% {
+            transform: scale(0.33);
+          }
+          100% {
+            transform: scale(0.66);
+          }
+        }
+      }
+    }
+  }
+
+  .partnership {
+    padding: 0 40px 145px;
+
+    &-container {
+      max-width: 1000px;
     }
   }
 }
