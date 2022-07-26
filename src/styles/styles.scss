@@ -22,6 +22,10 @@
 
 @import "mixins.scss";
 
+// body {
+//   background-color: $background;
+// }
+
 .header {
   padding: 50px 20px 9px;
   background-color: $background;
@@ -59,17 +63,21 @@
     }
   }
 }
+
 .intro {
-  padding: 133px 60px 103px 72px;
+  padding: 133px 60px 103px 22px;
   background-color: $background;
+  overflow: hidden;
 
   &-container {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1160px;
     display: flex;
-    gap: 55px;
+    gap: 50px;
 
     .description {
+      max-width: 503px;
+
       h1 {
         font-family: $Audiowide;
         font-weight: 400;
@@ -96,7 +104,7 @@
     .selector {
       display: flex;
       align-items: center;
-      gap: 60px;
+      gap: 50px;
 
       img {
         max-width: 235px;
@@ -116,7 +124,7 @@
 
 .waveNFT {
   background-color: $background;
-  padding: 114px 240px 120px 40px;
+  padding: 114px 40px 120px;
 
   &-container {
     margin: 0 auto;
@@ -169,14 +177,16 @@
     background-color: $background;
     margin: 0 auto;
     // border: 2px solid red;
-    max-width: 80%;
+    max-width: 1200px;
+    // width: 100%;
     overflow: hidden;
 
     div {
       display: flex;
-      width: 200%;
+      width: 100%;
 
       animation: marquee 5s linear infinite;
+      // white-space: nowrap;
 
       h2 {
         font-family: $Audiowide;
@@ -186,11 +196,11 @@
         text-transform: uppercase;
         color: $primary-color;
 
-        width: 100%;
+        // width: 100%;
 
         span {
           color: $background;
-          font-size: 7.45rem;
+          font-size: 4.25rem;
         }
 
         @keyframes marquee {
@@ -206,14 +216,15 @@
   }
 
   &-container {
-    padding: 120px 240px 120px 40px;
+    padding: 120px 20px;
 
     &-list {
       margin: 0 auto;
       max-width: 1160px;
       display: grid;
-      grid-template-columns: repeat(4, 245px);
+      grid-template-columns: repeat(auto-fill, 245px);
       gap: 60px;
+      grid-auto-flow: row;
 
       img {
         margin-bottom: 20px;
@@ -232,7 +243,7 @@
 }
 .story {
   background-color: $background;
-  padding: 120px 240px 132px 40px;
+  padding: 120px 40px 132px;
 
   &-container {
     margin: 0 auto;
@@ -513,7 +524,7 @@
       transform: translate(-60%, -13%);
 
       height: 1841px;
-      max-width: 1440px;
+      max-width: 1160px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -569,6 +580,8 @@
       }
       .circle3 {
         margin: auto 0;
+        max-width: 580px;
+        overflow: hidden;
         div {
           animation: pulse-ring 5s infinite 2s;
         }
@@ -585,7 +598,7 @@
 
 .partnership {
   background-color: $background;
-  padding: 0 240px 245px 40px;
+  padding: 0 40px 245px;
 
   &-container {
     max-width: 1160px;
@@ -686,7 +699,7 @@
 
 .faq {
   background-color: $background;
-  padding: 0 181px 115px 99px;
+  padding: 0 39px 115px;
 
   &-container {
     max-width: 1160px;
@@ -784,7 +797,8 @@
     background-color: $background;
     margin: 0 auto;
     // border: 2px solid red;
-    max-width: 80%;
+    max-width: 1200px;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
 
@@ -806,7 +820,7 @@
 
         span {
           color: $background;
-          font-size: 6.75rem;
+          font-size: 9.6rem;
         }
 
         @keyframes marquee {
@@ -822,13 +836,13 @@
   }
 
   &-container {
-    padding: 122px 140px 236px;
+    padding: 122px 20px 236px;
 
     &-members {
       max-width: 1160px;
       margin: 0 auto;
       display: flex;
-      gap: 100px;
+      justify-content: space-between;
 
       .team__member {
         display: flex;
@@ -884,15 +898,15 @@
 
 .join {
   background-color: $background;
-  padding: 0 136px 118px;
+  padding: 0 36px 118px;
 
   &-container {
     margin: 0 auto;
     max-width: 1160px;
     display: flex;
+    justify-content: space-between;
 
     &-info {
-      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -931,18 +945,19 @@
         }
       }
     }
-    &__purple {
-      flex: 1;
-    }
+    // &__purple {
+    //   flex: 1;
+    // }
   }
 }
 
 .footer {
   background-color: #42006a;
-  padding: 100px 140px;
+  padding: 100px 40px;
 
   &-container {
     max-width: 1160px;
+    width: 100%;
     min-height: 117px;
     margin: 0 auto;
     display: flex;
@@ -1001,6 +1016,10 @@
           font-size: 1.3rem;
           line-height: 1.5rem;
           color: $primary-color;
+
+          a {
+            color: $primary-color;
+          }
         }
       }
       &-social {

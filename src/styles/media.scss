@@ -1,0 +1,138 @@
+@import "variables.scss";
+
+@import "mixins.scss";
+@media (max-width: 1200px) {
+  .header {
+    &-container {
+      max-width: 900px;
+    }
+  }
+
+  .intro {
+    &-container {
+      max-width: 1000px;
+      gap: 40px;
+
+      .description {
+        max-width: 350px;
+
+        h1 {
+          font-size: 4rem;
+          line-height: 4.5rem;
+          margin-bottom: 30px;
+        }
+
+        button {
+          padding: 17px 30px 17px;
+        }
+      }
+    }
+    .selector {
+      gap: 35px;
+
+      img {
+        max-width: 180px;
+        max-height: 240px;
+      }
+    }
+  }
+
+  .waveNFT {
+    &-container {
+      max-width: 1000px;
+    }
+  }
+
+  .artists {
+    &__marquee {
+      max-width: 1025px;
+
+      div {
+        h2 {
+          font-size: 6.9rem;
+          line-height: 7.8rem;
+
+          span {
+            font-size: 3.5rem;
+          }
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    &-container {
+      &-list {
+        justify-content: center;
+      }
+    }
+  }
+
+  .roadmap {
+    &-container {
+      &-back {
+        max-width: 1025px;
+
+        .circle3 {
+          max-width: 510px;
+        }
+      }
+    }
+  }
+
+  .team {
+    &__marquee {
+      max-width: 1025px;
+
+      div {
+        h2 {
+          font-size: 6.5rem;
+          line-height: 7.4rem;
+
+          span {
+            font-size: 8.5rem;
+          }
+        }
+      }
+    }
+
+    &-container {
+      &-members {
+        max-width: 1000px;
+
+        .team__member {
+          img {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &-container {
+      max-width: 1000px;
+
+      .rights {
+        img {
+          width: 90%;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 2rem;
+        }
+      }
+
+      .links {
+        gap: 50px;
+      }
+    }
+  }
+}
