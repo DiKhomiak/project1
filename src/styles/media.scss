@@ -331,6 +331,23 @@
 
     &-container {
       max-width: 1000px;
+
+      .logos__marquee {
+        &__left {
+          h3 {
+            span {
+              margin-left: 100px;
+            }
+          }
+        }
+      }
+      &__right {
+        h3 {
+          span {
+            margin-right: 100px;
+          }
+        }
+      }
     }
   }
 
@@ -347,10 +364,6 @@
 
         h2 {
           max-width: 300px;
-        }
-
-        img {
-          // width: 80%;
         }
       }
 
@@ -452,14 +465,357 @@
         display: flex;
         justify-content: space-between;
 
+        &-social {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &-container {
+      max-width: 480px;
+
+      .nav-container {
+        max-width: 480px;
+        width: 100%;
+      }
+
+      .social {
+        display: none;
+      }
+    }
+  }
+
+  .intro {
+    &-container {
+      .description {
+        h1 {
+          font-size: 4.1rem;
+          line-height: 5.1rem;
+          text-align: center;
+        }
+
+        p {
+          font-size: 1.6rem;
+          line-height: 2;
+        }
+      }
+      .selector {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+          opacity: 1;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .waveNFT {
+    &-container {
+      flex-direction: column;
+      align-items: center;
+
+      &__blue {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h2 {
+          text-align: center;
+          padding: 0;
+        }
+      }
+
+      &-description {
+        max-width: 600px;
+      }
+    }
+  }
+
+  .artists {
+    font-size: 6.9rem;
+    line-height: 7.8rem;
+
+    &__marquee {
+      max-width: 340px;
+
+      h2 {
+        span {
+          margin: 0;
+        }
+      }
+
+      &__line1,
+      &__line2 {
+        animation: none;
+      }
+    }
+  }
+
+  .story {
+    &-container {
+      .content {
+        .list {
+          width: 72px;
+          label {
+            height: 144px;
+            padding-left: 13px;
+            width: 144px;
+            transform: rotate(-90deg);
+            display: flex;
+            justify-content: center;
+          }
+          .indicator {
+            height: 144px;
+          }
+        }
+
+        #partners:checked ~ .list .indicator {
+          top: 144px;
+        }
+        #future:checked ~ .list .indicator {
+          top: 288px;
+        }
+
+        .text-content {
+          width: 90%;
+          padding: 30px;
+
+          .founders {
+            padding-left: 0px;
+
+            h3 {
+              margin-left: 0;
+              font-size: 1.8rem;
+              line-height: 2.2rem;
+              min-height: 50px;
+            }
+            img {
+              display: none;
+            }
+          }
+
+          .partners {
+            padding-left: 0px;
+
+            h3 {
+              margin-left: 0;
+              font-size: 1.8rem;
+              line-height: 2.2rem;
+              min-height: 50px;
+            }
+            img {
+              display: none;
+            }
+          }
+
+          .future {
+            padding-left: 0px;
+
+            h3 {
+              margin-left: 0;
+              font-size: 1.8rem;
+              line-height: 2.2rem;
+              min-height: 50px;
+            }
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .roadmap {
+    .phases {
+      .phase {
+        width: 100%;
+        .phase-bottom {
+          position: relative;
+
+          .points {
+            min-height: 129px;
+            margin-right: 150px;
+            padding-left: 22px;
+            margin-bottom: 12px;
+          }
+
+          img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+          }
+        }
+      }
+    }
+
+    &-container {
+      &-back {
+        display: none;
+      }
+    }
+  }
+
+  .partnership {
+    padding: 20px;
+    &-container {
+      .logos__marquee {
+        &__left {
+          max-width: 480px;
+          h3 {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            animation: none;
+            span {
+              margin-left: 30px;
+            }
+          }
+
+          h3:nth-child(2) {
+            display: none;
+          }
+        }
+
+        &__right {
+          max-width: 480px;
+          h3 {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            animation: none;
+            span {
+              margin-right: 30px;
+            }
+          }
+
+          h3:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    padding: 50px 39px 115px;
+    &-container {
+      &__title {
+        img {
+          width: 40%;
+          height: 40%;
+        }
+
+        h2 {
+          text-align: center;
+        }
+      }
+
+      #question_a:checked ~ .answer.-A,
+      #question_b:checked ~ .answer.-B,
+      #question_c:checked ~ .answer.-C,
+      #question_d:checked ~ .answer.-D {
+        max-height: 200px;
+        padding: 0 30px 24px;
+      }
+
+      .question__headline {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        height: 72px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .team {
+    font-size: 6.9rem;
+    line-height: 7.8rem;
+
+    &__marquee {
+      max-width: 250px;
+
+      h2 {
+        span {
+          margin-left: 20px;
+        }
+      }
+
+      &__line1,
+      &__line2 {
+        animation: none;
+      }
+    }
+
+    &-container {
+      &-members {
+        gap: 10px;
+        .team__member {
+          .find {
+            display: none;
+          }
+          p {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .join {
+    &-container {
+      img {
+        display: none;
+      }
+
+      &-info {
+        align-items: center;
+        text-align: center;
+
+        p {
+          max-width: 600px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 30px 20px;
+    &-container {
+      .rights {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .links {
         nav {
+          justify-content: center;
+          gap: 30px;
         }
 
         &-general {
+          justify-content: center;
+          gap: 30px;
+        }
+
+        &-creators {
+          justify-content: center;
+          gap: 30px;
         }
 
         &-social {
-          max-width: 100px;
+          gap: 8px;
+          img {
+            width: 32px;
+          }
         }
       }
     }
