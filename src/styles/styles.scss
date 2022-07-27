@@ -178,39 +178,49 @@
     margin: 0 auto;
 
     max-width: 1200px;
-    // width: 100%;
     overflow: hidden;
+    display: flex;
+    height: 8.8rem;
 
-    div {
+    h2 {
+      font-family: $Audiowide;
+      font-weight: 400;
+      font-size: 7.9rem;
+      line-height: 8.8rem;
+      text-transform: uppercase;
+      color: $primary-color;
+      position: relative;
       display: flex;
-      width: 100%;
 
-      animation: marquee 5s linear infinite;
-      // white-space: nowrap;
+      span {
+        margin-left: 300px;
+      }
+    }
 
-      h2 {
-        font-family: $Audiowide;
-        font-weight: 400;
-        font-size: 7.9rem;
-        line-height: 8.8rem;
-        text-transform: uppercase;
-        color: $primary-color;
+    &__line1 {
+      animation: marquee1 12s linear infinite;
+    }
 
-        // width: 100%;
+    &__line2 {
+      animation: marquee2 12s linear infinite;
+      animation-delay: 6s;
+    }
 
-        span {
-          color: $background;
-          font-size: 4.25rem;
-        }
+    @keyframes marquee1 {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
+    @keyframes marquee2 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200%);
       }
     }
   }
@@ -412,6 +422,7 @@
 .roadmap {
   background-color: $background;
   padding: 118px 50px 288px;
+  overflow: hidden;
 
   &-container {
     margin: 0 auto;
@@ -580,7 +591,7 @@
       }
       .circle3 {
         margin: auto 0;
-        max-width: 580px;
+
         overflow: hidden;
         div {
           animation: pulse-ring 5s infinite 2s;
@@ -607,6 +618,7 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    overflow: hidden;
 
     h6 {
       font-family: $DM-Mono;
@@ -620,76 +632,109 @@
     }
 
     .logos__marquee {
-      background-color: $background;
-      margin: 0 auto;
-
-      max-width: 80%;
+      min-height: 150px;
+      max-width: 1160px;
       overflow: hidden;
-      white-space: nowrap;
 
-      .toleft {
+      &__left {
+        background-color: $background;
+        margin: 0 auto;
+
+        max-width: 1160px;
+        overflow: hidden;
         display: flex;
-
-        width: 200%;
-
-        animation: toleft 5s linear infinite;
+        height: 7.5rem;
 
         h3 {
-          padding: 20px;
           font-family: $Audiowide;
           font-weight: 400;
           font-size: 3rem;
           line-height: 3.1rem;
           text-transform: uppercase;
           color: $primary-color;
-
-          width: 100%;
+          position: relative;
+          display: flex;
 
           span {
-            color: $background;
-            font-size: 6rem;
+            margin-left: 150px;
           }
-          @keyframes toleft {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
+        }
+
+        &__line1 {
+          animation: marquee1 12s linear infinite;
+        }
+
+        &__line2 {
+          animation: marquee2 12s linear infinite;
+          animation-delay: 6s;
+        }
+
+        @keyframes marquee1 {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        @keyframes marquee2 {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-200%);
           }
         }
       }
+      &__right {
+        background-color: $background;
+        margin: 0 auto;
 
-      .toright {
+        max-width: 1160px;
+        overflow: hidden;
         display: flex;
-        justify-content: center;
-        width: 200%;
-
-        animation: toright 5s linear infinite;
+        height: 7.5rem;
 
         h3 {
-          padding: 20px;
           font-family: $Audiowide;
           font-weight: 400;
           font-size: 3rem;
           line-height: 3.1rem;
           text-transform: uppercase;
           color: $primary-color;
-
-          width: 100%;
+          position: relative;
+          display: flex;
 
           span {
-            color: $background;
-            font-size: 6rem;
+            margin-right: 150px;
           }
+        }
 
-          @keyframes toright {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(50%);
-            }
+        &__line1 {
+          animation: marquee02 12s linear infinite;
+        }
+
+        &__line2 {
+          animation: marquee01 12s linear infinite;
+          animation-delay: 6s;
+        }
+
+        @keyframes marquee02 {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+
+        @keyframes marquee01 {
+          0% {
+            transform: translateX(-200%);
+          }
+          100% {
+            transform: translateX(0);
           }
         }
       }
@@ -796,41 +841,51 @@
   &__marquee {
     background-color: $background;
     margin: 0 auto;
-    // border: 2px solid red;
+
     max-width: 1200px;
-    width: 100%;
     overflow: hidden;
-    white-space: nowrap;
+    display: flex;
+    height: 8.8rem;
 
-    div {
+    h2 {
+      font-family: $Audiowide;
+      font-weight: 400;
+      font-size: 7.9rem;
+      line-height: 8.8rem;
+      text-transform: uppercase;
+      color: $primary-color;
+      position: relative;
       display: flex;
-      width: 200%;
 
-      animation: marquee 5s linear infinite;
+      span {
+        margin-left: 300px;
+      }
+    }
 
-      h2 {
-        font-family: $Audiowide;
-        font-weight: 400;
-        font-size: 7.9rem;
-        line-height: 8.8rem;
-        text-transform: uppercase;
-        color: $primary-color;
+    &__line1 {
+      animation: marquee1 12s linear infinite;
+    }
 
-        width: 100%;
+    &__line2 {
+      animation: marquee2 12s linear infinite;
+      animation-delay: 6s;
+    }
 
-        span {
-          color: $background;
-          font-size: 9.6rem;
-        }
+    @keyframes marquee1 {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
+    @keyframes marquee2 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200%);
       }
     }
   }
@@ -945,9 +1000,6 @@
         }
       }
     }
-    // &__purple {
-    //   flex: 1;
-    // }
   }
 }
 
@@ -1025,6 +1077,7 @@
       &-social {
         display: flex;
         gap: 12px;
+        flex-wrap: wrap;
       }
     }
 

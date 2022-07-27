@@ -45,30 +45,6 @@
   }
 
   .artists {
-    &__marquee {
-      max-width: 1025px;
-
-      div {
-        h2 {
-          font-size: 6.9rem;
-          line-height: 7.8rem;
-
-          span {
-            font-size: 3.5rem;
-          }
-
-          @keyframes marquee {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-        }
-      }
-    }
-
     &-container {
       &-list {
         justify-content: center;
@@ -80,30 +56,11 @@
     &-container {
       &-back {
         max-width: 1025px;
-
-        .circle3 {
-          max-width: 510px;
-        }
       }
     }
   }
 
   .team {
-    &__marquee {
-      max-width: 1025px;
-
-      div {
-        h2 {
-          font-size: 6.5rem;
-          line-height: 7.4rem;
-
-          span {
-            font-size: 8.5rem;
-          }
-        }
-      }
-    }
-
     &-container {
       &-members {
         max-width: 1000px;
@@ -202,6 +159,7 @@
 
       .selector {
         gap: 50px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -246,27 +204,13 @@
 
   .artists {
     &__marquee {
-      max-width: 768px;
+      height: 7.8rem;
+      h2 {
+        font-size: 6.9rem;
+        line-height: 7.8rem;
 
-      div {
-        animation: marquee 3s linear infinite;
-
-        h2 {
-          font-size: 5.9rem;
-          line-height: 6.8rem;
-
-          span {
-            font-size: 5rem;
-          }
-
-          @keyframes marquee {
-            0% {
-              transform: translateX(0%);
-            }
-            100% {
-              transform: translateX(-70%);
-            }
-          }
+        span {
+          margin-left: 200px;
         }
       }
     }
@@ -377,27 +321,7 @@
 
       &-back {
         height: 1350px;
-        max-width: 760px;
-
-        .circle1,
-        .circle2,
-        .circle3 {
-          div {
-            border: 2px solid $neon;
-          }
-        }
-
-        .circle3 {
-          max-width: 380px;
-        }
-        @keyframes pulse-ring {
-          0% {
-            transform: scale(0.33);
-          }
-          100% {
-            transform: scale(0.66);
-          }
-        }
+        max-width: 768px;
       }
     }
   }
@@ -407,6 +331,137 @@
 
     &-container {
       max-width: 1000px;
+    }
+  }
+
+  .faq {
+    &-container {
+      max-width: 800px;
+      flex-direction: column;
+
+      &__title {
+        max-width: 800px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+
+        h2 {
+          max-width: 300px;
+        }
+
+        img {
+          // width: 80%;
+        }
+      }
+
+      .QandA {
+        max-width: 800px;
+      }
+    }
+  }
+
+  .team {
+    &__marquee {
+      height: 7.8rem;
+
+      h2 {
+        font-size: 6.9rem;
+        line-height: 7.8rem;
+
+        span {
+          margin-left: 150px;
+        }
+      }
+    }
+
+    &-container {
+      padding: 72px 20px 136px;
+
+      &-members {
+        max-width: 1000px;
+
+        .team__member {
+          img {
+            margin-bottom: 10px;
+          }
+
+          h5 {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            margin-bottom: 10px;
+          }
+
+          h6 {
+            margin-bottom: 12px;
+          }
+
+          .find {
+            margin-bottom: 12px;
+          }
+
+          p {
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  .join {
+    &-container {
+      max-width: 1000px;
+      justify-content: space-evenly;
+
+      &-info {
+        p {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+
+      &__purple {
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 30px 40px;
+    &-container {
+      max-width: 1000px;
+      flex-direction: column-reverse;
+      gap: 20px;
+
+      .rights {
+        align-items: flex-end;
+
+        a {
+          padding: 10px;
+
+          max-width: 150px;
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.531);
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+
+        nav {
+        }
+
+        &-general {
+        }
+
+        &-social {
+          max-width: 100px;
+        }
+      }
     }
   }
 }
