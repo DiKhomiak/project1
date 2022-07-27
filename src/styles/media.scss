@@ -635,29 +635,29 @@
   }
 
   .roadmap {
-    .phases {
-      .phase {
-        width: 100%;
-        .phase-bottom {
-          position: relative;
+    &-container {
+      .phases {
+        .phase {
+          width: 100%;
+          .phase-bottom {
+            position: relative;
 
-          .points {
-            min-height: 129px;
-            margin-right: 150px;
-            padding-left: 22px;
-            margin-bottom: 12px;
-          }
+            .points {
+              min-height: 129px;
+              margin-right: 150px;
+              padding-left: 22px;
+              margin-bottom: 12px;
+            }
 
-          img {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            img {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+            }
           }
         }
       }
-    }
 
-    &-container {
       &-back {
         display: none;
       }
@@ -796,6 +796,7 @@
       }
 
       .links {
+        align-items: center;
         nav {
           justify-content: center;
           gap: 30px;
@@ -813,8 +814,261 @@
 
         &-social {
           gap: 8px;
+
           img {
             width: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .waveNFT {
+    &-container {
+      &-description {
+        p {
+          font-size: 1.3rem;
+          line-height: 1.9rem;
+        }
+      }
+    }
+  }
+
+  .artists {
+    &__marquee {
+      max-width: 247px;
+      h2 {
+        font-size: 5rem;
+        line-height: 7.8rem;
+      }
+    }
+    &-container {
+      padding: 70px 20px;
+    }
+  }
+
+  .story {
+    padding: 70px 15px 52px;
+    &-container {
+      .content {
+        .list {
+          width: 42px;
+          label {
+            height: 124px;
+            padding-left: 0;
+            width: 124px;
+          }
+          .indicator {
+            height: 124px;
+          }
+        }
+
+        #partners:checked ~ .list .indicator {
+          top: 124px;
+        }
+        #future:checked ~ .list .indicator {
+          top: 248px;
+        }
+
+        .text-content {
+          width: 90%;
+          padding: 15px;
+
+          .founders {
+            h3 {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.2rem;
+              line-height: 1.9rem;
+            }
+          }
+
+          .partners {
+            h3 {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.2rem;
+              line-height: 1.9rem;
+            }
+          }
+
+          .future {
+            h3 {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1.2rem;
+              line-height: 1.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .roadmap {
+    padding: 68px 50px 83px;
+    &-container {
+      .phases {
+        .phase {
+          .phase-top {
+            max-height: 90px;
+          }
+          .phase-bottom {
+            position: static;
+            flex-direction: column-reverse;
+            gap: 20px;
+            align-items: center;
+
+            .points {
+              min-height: 50px;
+              margin-right: 0;
+              padding-left: 0;
+
+              text-align: center;
+            }
+
+            img {
+              position: static;
+            }
+          }
+        }
+      }
+
+      &-back {
+        display: none;
+      }
+    }
+  }
+
+  .partnership {
+    padding: 20px;
+    &-container {
+      .logos__marquee {
+        &__left {
+          height: 5.5rem;
+          max-width: 320px;
+          h3 {
+            font-size: 0.9rem;
+
+            span {
+              margin-left: 20px;
+            }
+          }
+        }
+
+        &__right {
+          height: 5.5rem;
+          max-width: 320px;
+          h3 {
+            font-size: 0.9rem;
+
+            span {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    &-container {
+      &__title {
+        margin-bottom: 30px;
+        h2 {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          margin-bottom: 0;
+        }
+      }
+      #question_a:checked ~ .answer.-A,
+      #question_b:checked ~ .answer.-B,
+      #question_c:checked ~ .answer.-C,
+      #question_d:checked ~ .answer.-D {
+        max-height: 200px;
+        padding: 0 30px 24px;
+      }
+
+      .question__headline::before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 30px;
+
+        width: 7px;
+        height: 7px;
+      }
+
+      .question__headline {
+        box-shadow: 0px 0px 6px 2px rgba(141, 253, 27, 0.75) inset;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 0 25px;
+      }
+    }
+  }
+
+  .team {
+    &-container {
+      padding: 52px 20px 112px;
+      &-members {
+        .team__member {
+          h5 {
+            font-size: 1.3rem;
+            line-height: 2rem;
+          }
+
+          h6 {
+            font-size: 1rem;
+            letter-spacing: 0;
+          }
+
+          p {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 30px 20px;
+    &-container {
+      .rights {
+        align-items: center;
+        a {
+          width: 120px;
+        }
+      }
+
+      .links {
+        max-width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        &-general {
+          justify-content: center;
+          gap: 30px;
+        }
+
+        &-creators {
+          p {
+            color: rgba(255, 255, 255, 0.637);
+          }
+        }
+
+        &-social {
+          max-width: 65px;
+          gap: 8px;
+          img {
+            width: 28px;
           }
         }
       }
